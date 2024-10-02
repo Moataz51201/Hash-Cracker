@@ -15,11 +15,19 @@ This Python script attempts to crack various types of cryptographic hashes using
 - RIPEMD160, Whirlpool
 - MySQL41
 
+## Disclaimer:
+This script is intended for educational and ethical purposes only. Do not use it to crack passwords or hashes you do not own or have permission to test. The author is not responsible for any misuse of this script.
+
 ## Prerequisites:
 - Python 3.x
 - 'pyfiglet' for ASCII banners: 'pip install pyfiglet'
 - 'passlib' for NTLM and LM hashes: 'pip install passlib'
 
 ## How to Use:
-1. Install the necessary libraries:
-   pip install pyfiglet passlib
+python hash_cracker.py -w <path_to_wordlist> -c <hash> [-v]
+-w: Path to the wordlist file.
+-c: Hash to be cracked.
+-v: Verbose mode (optional).
+
+## Example:
+python3 hash_cracker.py -w wordlist.txt -c 5d41402abc4b2a76b9719d911017c592 -v
